@@ -1,43 +1,59 @@
 <!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>나의 심플 페이지</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <title>HunsGood</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
+
+<header class="site-header">
+  <div class="container header-wrap">
+    <div class="logo">HunsGood</div>
+    <nav class="nav">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Board</a>
+      <a href="#">Files</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
     <div class="container">
-      <h1 class="logo">나의 홈페이지</h1>
-      <nav class="nav">
-        <a href="#about">소개</a>
-        <a href="#works">작업물</a>
-        <a href="#contact">연락</a>
-      </nav>
-    </div>
-  </header>
+      <h1>심플하지만 강력한<br>나만의 웹 공간</h1>
+      <p>
+        이 사이트는 HTML과 CSS부터 시작해서  
+        앞으로 로그인, 게시판, 자료실까지 차근차근 확장될 개인 프로젝트입니다.
+      </p>
+      <a class="cta" href="#">시작하기</a>
 
-  <main>
-    <section class="hero">
-      <div class="container">
-        <h2>심플하고 예쁜 시작</h2>
-        <p>차근차근 기능을 더해가며 나만의 공간으로 만들어보세요.</p>
-        <a class="cta" href="#works">시작하기</a>
+      <div class="cards">
+        <div class="card">
+          <h3>메인 홈</h3>
+          <p>사이트의 전체 방향과 소개를 담당하는 핵심 페이지입니다.</p>
+        </div>
+        <div class="card">
+          <h3>게시판</h3>
+          <p>차후 로그인 기능과 함께 글을 작성할 수 있도록 확장될 공간입니다.</p>
+        </div>
+        <div class="card">
+          <h3>자료실</h3>
+          <p>파일과 자료를 직접 업로드하고 관리할 수 있도록 발전할 영역입니다.</p>
+        </div>
       </div>
-    </section>
 
-    <section id="about" class="container">
-      <h3>소개</h3>
-      <p>여기에 간단한 자기소개나 프로젝트 목표를 적습니다.</p>
-    </section>
+    </div>
+  </section>
 
-  </main>
+</main>
 
-  <footer class="site-footer">
-    <div class="container">© 2025 당신의 이름</div>
-  </footer>
+<footer class="site-footer">
+  © 2025 HunsGood. All rights reserved.
+</footer>
+
 </body>
 </html>
-
