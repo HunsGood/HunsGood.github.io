@@ -165,3 +165,51 @@ body {
   font-size: 14px;
   opacity: 0.6;
 }
+
+/* ✅ 게시판 테이블 UI */
+.board-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.board-table th,
+.board-table td {
+  padding: 14px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.board-table th {
+  background: rgba(255, 255, 255, 0.08);
+  font-weight: 600;
+}
+
+.board-table tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.board-table tr:hover {
+  background: rgba(99, 102, 241, 0.15);
+}
+
+.board-title {
+  text-align: left;
+}
+
+/* ✅ 모바일 대응 */
+@media (max-width: 768px) {
+  .board-table th:nth-child(1),
+  .board-table td:nth-child(1) {
+    display: none; /* 번호 숨김 */
+  }
+
+  .board-table th:nth-child(3),
+  .board-table td:nth-child(3) {
+    display: none; /* 날짜 숨김 */
+  }
+}
+
