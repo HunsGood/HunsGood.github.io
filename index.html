@@ -1,41 +1,52 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>HunsGood</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- CSS 연결 -->
-  <link rel="stylesheet" href="styles.css?v=10" />
+  <link rel="stylesheet" href="styles.css?v=4">
 </head>
 <body>
 
-  <!-- ✅ 상단 헤더 -->
-  <header class="header">
-    <div class="header-wrap">
-      <h1 class="logo">HunsGood</h1>
+<header>
+  <h1>HunsGood</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="board.html">Board</a>
+    <a href="files.html">Files</a>
+  </nav>
+</header>
 
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="board.html">Board</a>
-        <a href="files.html">Files</a>
-      </nav>
-    </div>
-  </header>
+<!-- ✅ 메인 비주얼 -->
+<section class="hero">
+  <div class="hero-inner">
+    <h2>Welcome to My Space</h2>
+    <p>차근차근 만들어가는 나만의 웹사이트</p>
+  </div>
+</section>
 
-  <!-- ✅ 메인 히어로 영역 (배경 이미지 적용되는 핵심 구간) -->
-  <section class="hero">
-    <div class="hero-content">
-      <h2>환영합니다</h2>
-      <p>이곳은 개인 연습과 기록을 위한 공간입니다.</p>
+<!-- ✅ 최근 게시글 -->
+<section class="latest-posts">
+  <h2>최근 게시글</h2>
+  <ul id="latest-list"></ul>
+</section>
 
-      <div class="buttons">
-        <a href="about.html" class="btn">About 보기</a>
-        <a href="board.html" class="btn outline">게시판 가기</a>
-      </div>
-    </div>
-  </section>
+<!-- ✅ 최신글 자동 로딩 스크립트 -->
+<script>
+fetch("board.html")
+  .then(res => res.text())
+  .then(html => {
+    const temp = document.createElement("div");
+    temp.innerHTML = html;
+
+    const posts = temp.querySelectorAll("#post-data li");
+    const target = document.getElementById("latest-list");
+
+    for (let i = 0; i < 3; i++) {
+      target.appendChild(posts[i].cloneNode(true));
+    }
+  });
+</script>
 
 </body>
 </html>
