@@ -138,3 +138,30 @@ body {
   }
 
 }
+
+/* 페이지 공통 레이아웃 */
+.page-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  color: #e2e8f0;
+}
+
+.page-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.page-text {
+  font-size: 16px;
+  line-height: 1.7;
+  opacity: 0.9;
+  margin-bottom: 12px;
+}
+
+.page-footer {
+  margin-top: 40px;
+  font-size: 14px;
+  opacity: 0.6;
+}
